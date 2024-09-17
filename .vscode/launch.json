@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug BudgetApp",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/environment", // Adjust this path to match your executable location
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb", // Ensure this path is correct for your system
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "CMake: Build", // Make sure this matches your build task
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}
